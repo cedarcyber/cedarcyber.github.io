@@ -1,0 +1,118 @@
+/* === Article Nav === */
+
+.article-nav {
+  background-color: var(--bg-hero);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+}
+
+.back-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.back-link:hover {
+  opacity: 0.75;
+}
+
+/* === Article Layout === */
+
+.article-main {
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+.article-body {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* === Article Header === */
+
+.article-header {
+  margin-bottom: 2.5rem;
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.article-sep {
+  opacity: 0.4;
+}
+
+.article-source {
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.article-source:hover {
+  opacity: 0.75;
+}
+
+.article-title {
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-weight: 700;
+  color: #e6edf3;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+/* === Article Content === */
+
+.article-content {
+  border-top: 1px solid var(--border);
+  padding-top: 2rem;
+}
+
+.article-content p {
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+.article-content h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e6edf3;
+  margin-top: 2.25rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.01em;
+}
+
+/* === Article Footer === */
+
+.article-footer {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+/* === Responsive === */
+
+@media (max-width: 600px) {
+  .article-title {
+    font-size: 1.4rem;
+  }
+
+  .article-footer {
+    flex-direction: column;
+  }
+
+  .article-footer .button {
+    text-align: center;
+  }
+}

@@ -430,6 +430,93 @@ footer.footer {
   margin-top: 0.25rem;
 }
 
+/* === Writing Section === */
+
+.writing-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.writing-card {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.writing-card:first-child {
+  padding-top: 0;
+}
+
+.writing-card:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.writing-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.35rem;
+}
+
+.writing-date {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.writing-publication {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  opacity: 0.8;
+}
+
+.writing-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.writing-title a {
+  color: #e6edf3;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.writing-title a:hover {
+  color: var(--accent);
+}
+
+.writing-excerpt {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-bottom: 0.75rem;
+}
+
+.writing-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.writing-link {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.writing-link:hover {
+  opacity: 0.75;
+}
+
+.writing-link-external {
+  color: var(--text-muted);
+}
+
 /* === Reduced Motion === */
 
 @media (prefers-reduced-motion: reduce) {

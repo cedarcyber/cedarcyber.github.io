@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doing Our Part: LogicGate's Bug Bounty Program | Anthony Matar</title>
+    <meta
+      name="description"
+      content="How LogicGate uses a bug bounty program to enable near-continuous penetration testing without the cost and bandwidth overhead of repeated stand-alone tests."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../writing.css" />
+  </head>
+  <body>
+    <header class="article-nav">
+      <div class="container">
+        <a href="../index.html" class="back-link">← Anthony Matar</a>
+      </div>
+    </header>
+
+    <main class="container article-main">
+      <article class="article-body">
+        <header class="article-header">
+          <div class="article-meta">
+            <span class="article-date">October 2021</span>
+            <span class="article-sep">·</span>
+            <a
+              href="https://www.logicgate.com/blog/doing-our-part-logicgates-bug-bounty-program/"
+              class="article-source"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Originally published on LogicGate</a>
+          </div>
+          <h1 class="article-title">Doing Our Part: LogicGate's Bug Bounty Program</h1>
+        </header>
+
+        <div class="article-content">
+          <p>
+            "Do you perform penetration testing on your product? If yes, how often?" If I had a nickel every time I saw a version of this question asked on vendor due diligence forms or as a line item in a security audit, I'd finally be ready to &lt;insert a thing I'd do with a lot of money here&gt;. But I digress. October is Cybersecurity Awareness Month! This year's theme is "Do Your Part. #BeCyberSmart." Below, I'll outline how LogicGate uses a bug bounty program to help us do our part with more consistent penetration testing.
+          </p>
+
+          <h2>How It Started</h2>
+
+          <p>
+            In the olden days, in which security was not even on the radar of most organizations as a business imperative, standards organizations (e.g., ISO) and governmental bodies (e.g., NIST) began setting the stage for what constituted a good cybersecurity program. Since these groups were introducing "zero to one" changes to the control landscape, it was natural that the original recommended frequency for applying a control would be "the bare minimum". Do you test your solution? Do so at least once a year, "they" say! While the progress in the space is something worth celebrating, new security philosophies are entering the scene in response to the now-ubiquitous practice of continuous development and deployment of products. Testing once a year isn't sufficient when an organization releases major product upgrades much more frequently (say, 12 times a year).
+          </p>
+
+          <p>
+            Traditionally, organizations will bring in a qualified third-party vendor with expertise in automated and manual penetration testing to see where flaws or vulnerabilities might exist in a product. Some organizations may bring in penetration testers once a year to meet the bare minimum standards despite spending an entire year making minor changes and deploying more than a handful of new feature releases. In my estimation, the security leaders in the security testing deficit aren't unaware or unwilling to operate differently but are instead dealing with cost and bandwidth constraints.
+          </p>
+
+          <p>
+            A singular penetration test isn't exactly expensive for an enterprise, but increasing testing frequency to better match feature upgrades becomes cost-prohibitive. Consider an organization jumping from one test per year to four to account for quarterly feature releases. In this case, they end up potentially quadrupling the cost of penetration testing in their annual budgeting conversations—taking a disproportionate amount of security budget and money away from other potentially beneficial programs.
+          </p>
+
+          <p>
+            By no means a problem exclusive to security, time constraints become another reason organizations keep their penetration tests to the allowable minimums. Even the most professional and efficient vendor will require pre-work, stakeholder meetings, mid-test support, and post-op activities. It can become unrealistic to dedicate time and resources to these tasks many times a year. Given cost and bandwidth constraints, it becomes more apparent why a security professional might stick to the bare minimum.
+          </p>
+
+          <h2>How It's Going</h2>
+
+          <p>
+            Ok, so I've cut us security professionals quite a bit of slack. You see, it's hard and expensive to do security testing all the time! Not so fast. The market has responded, and the available alternative options are growing. Enter: a bug bounty program.
+          </p>
+
+          <p>
+            LogicGate is now among a growing number of companies leveraging the power of distributed penetration testing. That is, bringing in security researchers (i.e., penetration testers) to test products in a way that taps into the power of crowdsourcing. One specific way LogicGate has leveraged distributed penetration testing is through a bug bounty program. You may remember our post about a Vulnerability Disclosure Program (VDP). A bug bounty program maintains many aspects of a VDP with a key distinction—researchers are incentivized with monetary rewards to test a product and find any vulnerabilities. This program creates an environment of near-continuous (of course not in a literal sense) penetration testing. There are willing freelance security researchers who make their living by finding vulnerabilities in platforms and getting paid for it taking the time to test our product.
+          </p>
+
+          <p>
+            LogicGate uses a vendor, BugCrowd, to manage its bug bounty program. On an ongoing basis, security researchers are presented with the challenge of testing LogicGate to earn cash. For LogicGate internally, we use the Vulnerability Management Application in Risk Cloud to ingest findings from BugCrowd to track them to remediation.
+          </p>
+
+          <h2>Bug Bounty 101</h2>
+
+          <p>
+            So how does this solve the problem of bare minimum security testing? Well, while a managed bug bounty program isn't free, its maintenance costs are similar to that of a stand-alone penetration test. A pool of cash exists to payout security researchers (say, $2000 for a P1 and $200 for a P5 finding), and thus, the organization is only on the hook to pay for what is considered "true" findings. The difference is that continuous testing occurs throughout the year without having to duplicate the maintenance costs. Similar efficiencies are found in the bandwidth constraint (setup one bug bounty rather than five penetration tests).
+          </p>
+
+          <p>
+            Programs are highly customizable and allow for fine-tuning to encourage testing on certain aspects of a product or new features. For instance, to get researchers to test a new feature before launch, bounty at double the payout can be offered to incentivize researchers to try and find flaws. A bug bounty doesn't mean we don't also do stand-alone penetration testing (we do), but it eliminates the need to have a dozen stand-alone tests procured to keep up with our release cycle.
+          </p>
+
+          <p>
+            While the bug bounty concept has been around for years, it has become increasingly mainstream and a staple of any security program needing to mature. Although expectations have been low since the past two decades of security standards proliferation, they won't stay low forever. Standards, regulations, and customer requirements are sure to expect closer alignment between how often penetration testing occurs versus how often releases are made. With a bug bounty, it becomes feasible and efficient for an organization to test a product year-round and emphasize newer features, helping them do their part to stay cyber smart.
+          </p>
+        </div>
+
+        <footer class="article-footer">
+          <a
+            href="https://www.logicgate.com/blog/doing-our-part-logicgates-bug-bounty-program/"
+            class="button secondary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >View original post →</a>
+          <a href="../index.html#writing" class="button secondary">← Back to Writing</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer class="container footer">
+      <p>&copy; <span id="year"></span> Anthony Matar</p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
