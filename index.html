@@ -14,6 +14,17 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <nav class="site-nav" id="site-nav">
+      <div class="container nav-inner">
+        <a href="#about" class="nav-link" data-section="about">Security Leadership &amp; Engineering</a>
+        <a href="#tools" class="nav-link" data-section="tools">Things I Do</a>
+        <a href="#tool-logos" class="nav-link" data-section="tool-logos">Tech I Use</a>
+        <a href="#standards-logos" class="nav-link" data-section="standards-logos">Standards &amp; Regulations</a>
+        <a href="#writing" class="nav-link" data-section="writing">Writing &amp; Talks</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+        <a href="https://www.linkedin.com/in/anthonymatar/" class="nav-link nav-link-linkedin" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      </div>
+    </nav>
     <header class="hero">
       <div class="container">
         <p class="kicker">hello world</p>
@@ -520,6 +531,36 @@
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Active nav link highlighting as user scrolls
+      (function () {
+        var navLinks = document.querySelectorAll(".nav-link[data-section]");
+        var currentActive = null;
+
+        function setActive(id) {
+          if (currentActive === id) return;
+          currentActive = id;
+          navLinks.forEach(function (link) {
+            link.classList.toggle("nav-active", link.dataset.section === id);
+          });
+        }
+
+        var sectionObserver = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                setActive(entry.target.id);
+              }
+            });
+          },
+          { rootMargin: "-10% 0px -65% 0px", threshold: 0 }
+        );
+
+        navLinks.forEach(function (link) {
+          var section = document.getElementById(link.dataset.section);
+          if (section) sectionObserver.observe(section);
+        });
+      })();
 
       // Scroll fade-up animations
       const observer = new IntersectionObserver(

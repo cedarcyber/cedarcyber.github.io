@@ -41,6 +41,70 @@ body {
   padding: 0 1.5rem;
 }
 
+/* === Site Navigation === */
+
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10, 14, 20, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: stretch;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.nav-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.7rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+  flex-shrink: 0;
+}
+
+.nav-link:hover {
+  color: var(--text);
+}
+
+.nav-link.nav-active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.nav-link-linkedin {
+  margin-left: auto;
+  color: var(--accent);
+  border-left: 1px solid var(--border);
+  padding-left: 1rem;
+}
+
+.nav-link-linkedin:hover {
+  color: var(--accent);
+  opacity: 0.8;
+}
+
+/* Offset anchor targets so they don't hide under sticky nav */
+section[id] {
+  scroll-margin-top: 48px;
+}
+
 /* === Hero === */
 
 .hero {
