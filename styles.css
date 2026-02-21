@@ -11,10 +11,11 @@
   --bg-hero: #0a0e14;
   --accent: #58a6ff;
   --accent-glow: rgba(88, 166, 255, 0.18);
+  --accent-arcane: #8b5cf6;
   --text: #c9d1d9;
   --text-muted: #8b949e;
   --border: #30363d;
-  --border-accent: rgba(88, 166, 255, 0.28);
+  --border-accent: rgba(139, 92, 246, 0.25);
   --radius: 8px;
   --shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
 }
@@ -46,8 +47,10 @@ body {
   background-color: var(--bg-hero);
   background-image:
     radial-gradient(ellipse 80% 55% at 50% 0%, rgba(88, 166, 255, 0.11) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 8% 100%, rgba(139, 92, 246, 0.09) 0%, transparent 55%),
+    radial-gradient(ellipse 55% 45% at 92% 95%, rgba(139, 92, 246, 0.07) 0%, transparent 50%),
     radial-gradient(circle, rgba(88, 166, 255, 0.11) 1px, transparent 1px);
-  background-size: 100% 100%, 28px 28px;
+  background-size: 100% 100%, 100% 100%, 100% 100%, 28px 28px;
   border-bottom: 1px solid var(--border);
   padding: 4.5rem 0 3.5rem;
   text-align: center;
@@ -71,9 +74,16 @@ body {
   display: inline-block;
   width: 20px;
   height: 1.5px;
-  background: var(--accent);
   border-radius: 2px;
-  opacity: 0.7;
+  opacity: 0.75;
+}
+
+.kicker::before {
+  background: linear-gradient(to right, var(--accent), var(--accent-arcane));
+}
+
+.kicker::after {
+  background: linear-gradient(to right, var(--accent-arcane), var(--accent));
 }
 
 .hero h1 {
@@ -82,6 +92,7 @@ body {
   color: #e6edf3;
   letter-spacing: -0.025em;
   margin-bottom: 0.5rem;
+  text-shadow: 0 0 60px rgba(139, 92, 246, 0.22);
 }
 
 .subtitle {
@@ -121,8 +132,8 @@ body {
 }
 
 .profile-photo img:hover {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 4px rgba(88, 166, 255, 0.22), 0 0 28px rgba(88, 166, 255, 0.15);
+  border-color: var(--accent-arcane);
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.22), 0 0 32px rgba(139, 92, 246, 0.2);
   transform: scale(1.05);
 }
 
