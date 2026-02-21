@@ -8,6 +8,9 @@
       name="description"
       content="Professional profile, experience, projects, and contact information."
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -458,6 +461,24 @@
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Scroll fade-up animations
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.08, rootMargin: "0px 0px -30px 0px" }
+      );
+
+      document.querySelectorAll(".card").forEach((el) => {
+        el.classList.add("fade-up");
+        observer.observe(el);
+      });
     </script>
   </body>
 </html>
