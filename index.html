@@ -14,6 +14,17 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <nav class="site-nav" id="site-nav">
+      <div class="container nav-inner">
+        <a href="#about" class="nav-link" data-section="about">README</a>
+        <a href="#tools" class="nav-link" data-section="tools">Things I Do</a>
+        <a href="#tool-logos" class="nav-link" data-section="tool-logos">Tech I Use</a>
+        <a href="#standards-logos" class="nav-link" data-section="standards-logos">Standards &amp; Regulations</a>
+        <a href="#writing" class="nav-link" data-section="writing">Writing &amp; Talks</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+        <a href="https://www.linkedin.com/in/anthonymatar/" target="_blank" rel="noopener noreferrer" class="nav-link nav-link-linkedin">LinkedIn ↗</a>
+      </div>
+    </nav>
     <header class="hero">
       <div class="container">
         <p class="kicker">hello world</p>
@@ -514,6 +525,30 @@
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Sticky nav active-section highlighting
+      (function () {
+        var navLinks = document.querySelectorAll(".nav-link[data-section]");
+        var sections = document.querySelectorAll("section[id]");
+
+        var navObserver = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                var id = entry.target.id;
+                navLinks.forEach(function (link) {
+                  link.classList.toggle("nav-active", link.dataset.section === id);
+                });
+              }
+            });
+          },
+          { rootMargin: "-10% 0px -65% 0px" }
+        );
+
+        sections.forEach(function (section) {
+          navObserver.observe(section);
+        });
+      })();
 
       // Scroll fade-up animations
       const observer = new IntersectionObserver(
