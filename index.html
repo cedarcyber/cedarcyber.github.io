@@ -524,6 +524,12 @@
     </footer>
 
     <script>
+      // On page load/refresh, always start at the top and strip any hash from the URL
+      if (window.location.hash) {
+        history.replaceState(null, "", window.location.pathname + window.location.search);
+      }
+      window.scrollTo(0, 0);
+
       document.getElementById("year").textContent = new Date().getFullYear();
 
       // Sticky nav active-section highlighting
