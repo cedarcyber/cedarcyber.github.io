@@ -661,7 +661,7 @@
         window.addEventListener('resize', resize);
 
         var COLORS = ['#ffffff', '#a5c8ff', '#8b5cf6', '#c084fc', '#fbbf24', '#7dd3fc'];
-        var NUM_STARS = 75;
+        var NUM_STARS = 38;
 
         // Floating background stars
         var stars = [];
@@ -687,7 +687,7 @@
           sparkles.push({
             x: Math.random() * W,
             y: Math.random() * H,
-            size: Math.random() * 6 + 3,
+            size: Math.random() * 3 + 1.5,
             op: 1,
             life: 0,
             maxLife: Math.random() * 80 + 50,
@@ -731,9 +731,9 @@
             points.push({
               x: bx + (Math.random()-0.5)*8,
               y: by + (Math.random()-0.5)*8,
-              size: Math.random() * 4.5 + 2,
+              size: Math.random() * 2.25 + 1,
               op: 0,
-              maxOp: Math.random() * 0.75 + 0.25,
+              maxOp: Math.random() * 0.375 + 0.125,
               life: 0,
               delay: Math.floor(t * steps * 3),
               maxLife: Math.random() * 55 + 45,
@@ -759,7 +759,7 @@
             if (s.x > W + 5) s.x = -5;
             if (s.y < -5) s.y = H + 5;
             if (s.y > H + 5) s.y = -5;
-            ctx.globalAlpha = s.op * 0.65;
+            ctx.globalAlpha = s.op * 0.325;
             ctx.fillStyle = s.color;
             ctx.beginPath();
             ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
@@ -767,9 +767,9 @@
           }
 
           // Sparkles
-          if (time - lastSparkle > 260) {
+          if (time - lastSparkle > 520) {
             addSparkle();
-            if (Math.random() < 0.35) addSparkle();
+            if (Math.random() < 0.175) addSparkle();
             lastSparkle = time;
           }
           for (var i = sparkles.length - 1; i >= 0; i--) {
@@ -783,13 +783,13 @@
             var grd = ctx.createRadialGradient(sp.x, sp.y, 0, sp.x, sp.y, currentSize * 2);
             grd.addColorStop(0, sp.color);
             grd.addColorStop(1, 'rgba(0,0,0,0)');
-            ctx.globalAlpha = sp.op * 0.35;
+            ctx.globalAlpha = sp.op * 0.175;
             ctx.fillStyle = grd;
             ctx.beginPath();
             ctx.arc(sp.x, sp.y, currentSize * 2, 0, Math.PI * 2);
             ctx.fill();
             // Star shape
-            ctx.globalAlpha = sp.op;
+            ctx.globalAlpha = sp.op * 0.5;
             ctx.fillStyle = sp.color;
             drawStar4(sp.x, sp.y, currentSize, sp.rot);
           }
