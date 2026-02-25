@@ -90,29 +90,6 @@
   letter-spacing: 0.01em;
 }
 
-.article-figure {
-  margin: 0 0 2rem;
-}
-
-.article-figure img {
-  width: 100%;
-  display: block;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-}
-
-.article-content a {
-  color: var(--accent);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(88, 166, 255, 0.3);
-  transition: border-color 0.2s, opacity 0.2s;
-}
-
-.article-content a:hover {
-  border-bottom-color: var(--accent);
-  opacity: 0.85;
-}
-
 /* === Article Footer === */
 
 .article-footer {
