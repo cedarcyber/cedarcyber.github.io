@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Where is Security's "Great Leap Forward?" | Anthony Matar</title>
+    <meta
+      name="description"
+      content="Developers now have AI agents that orchestrate their entire workflow. Security practitioners are still doing the dashboard dance. Where is our equivalent leap forward?"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../writing.css" />
+  </head>
+  <body>
+    <header class="article-nav">
+      <div class="container">
+        <a href="../index.html" class="back-link">← Anthony Matar</a>
+      </div>
+    </header>
+
+    <main class="container article-main">
+      <article class="article-body">
+        <header class="article-header">
+          <div class="article-meta">
+            <span class="article-date">February 25, 2026</span>
+            <span class="article-sep">·</span>
+            <span class="article-source">Part One of a Series</span>
+          </div>
+          <h1 class="article-title">Where is Security's "Great Leap Forward?"</h1>
+        </header>
+
+        <div class="article-content">
+          <p>
+            If your social media doom-scroll of choice is LinkedIn, you've doubtless been hit by a wave of hot takes about how Anthropic's Claude Code and OpenAI's Codex are the "canaries in the coal mine" for the death of SaaS. I won't be musing on that though.
+          </p>
+
+          <p>
+            I've been "AI-pilled" for a while regarding white-collar jobs and wages. When I'm asked, I parrot something like: if it took a team of ten, it'll now take five. But reading Matt Shumer's <em>"Something Big is Happening"</em> recently gave me some existential Sunday scaries. He describes how software engineers have watched their entire workflows change in just the past few months; they find a majority of their time is spent chit-chatting with a coding agent in natural language instead of writing code.
+          </p>
+
+          <p>
+            Shumer is essentially describing a Great Leap Forward for the software engineer role and suggests other white collar work is next (similar vibes to the now viral Citrini Research/Doomsday paper). I've read some interesting counterpoints to the more doom-and-gloom aspects of these pieces and I'm a bit more optimistic… but the revolutionary change they describe feels real.
+          </p>
+
+          <p>
+            On a personal note, I'm seeing these workflow changes for devs occur in real time within my own company's engineering workforce. A close friend of mine (masters in C.S. and a FAANG SWE) described the phenomenon of making coffee and eating lunch while his development objectives were being churned away by an agent burning tokens and following his instructions carefully. He is still in disbelief about how his role has changed.
+          </p>
+
+          <h2>The Collapse of the Stack</h2>
+
+          <p>
+            The collapse of the stack is wild. A developer used to be paid the big bucks to context-switch across repositories, files, user stories, bugs, and PRDs to synthesize a single feature — and (oh yeah) write code. This "Great Leap Forward" for the developer has turned that on its head. Developers are moving toward a unified experience where they simply express intent in natural language. The agent orchestrates the complexity across those various layers to make it happen, waiting for feedback from their conductor to let them know they've done good. Software development is being flattened.
+          </p>
+
+          <p>
+            If this is where the world is going, and if the recent hype regarding agentic workflows and the broader "agentic everything" push is any indication, then this revolution is heading my way soon too. I suppose I welcome my new AI overlords — because frankly, I want to see that same level of leverage in my own work.
+          </p>
+
+          <h2>The Dashboard Dance</h2>
+
+          <p>
+            I'm not a developer, but I am a security manager for emerging tech companies. I lead "small but mighty" teams of two to four protecting SMB organizations. We do it all: SOC 2 compliance, endpoint security, cloud architecture, security awareness, and product security. And watching the developer role transform has forced me to look at my own workflow with jealousy: why can't I have this type of leverage yet?
+          </p>
+
+          <p>
+            I use AI all day, mostly as a co-pilot. My style of managing work through Phil Venable's "Risk = Hazard + Outrage" model remains the same, but execution speed has multiplied. For example, troubleshooting a SASE or EDR policy by sifting through logs used to be a slog; now, I dump a "Ctrl-A" copy-paste of context into ChatGPT and voice-narrate what I'm experiencing. Tasks that would have otherwise taken me 5x as long now happen in minutes. But I am still manually juggling between a dozen vendors, browser tabs, desktop apps, chat apps, dashboards, and admin portals to bring together whatever it means for me to be "doing security."
+          </p>
+
+          <p>
+            I know I am stating the obvious — describing the problem that will make &lt;insert company here&gt; a trillion dollars once solved — but I'm doing the dashboard dance and I hate it.
+          </p>
+
+          <h2>Enforcement Without Orchestration</h2>
+
+          <p>
+            So when I say I'm waiting for security's "Great Leap Forward," I'm not saying "I want AI to write my policies" or "I want a chatbot to explain alerts." (Don't get me wrong, I like that a lot.) Rather, I want the same flattening that developers are experiencing: one place where I can express intent, and a system that orchestrates (most of) the rest.
+          </p>
+
+          <p>
+            Security has enforcement. What we lack is orchestration. By "orchestration," I'm referring to the idea that employees in all disciplines exist to coordinate multiple independent systems, data sets, stakeholders, and objectives to achieve whatever their mandate is. Automation can be introduced to remove manual effort, improve consistency, and speed things up — but typically automations exist in different forms and in different places, and they're still orchestrated by the human operator. In security, that operator is the practitioner who wakes up and starts bridging disconnected systems by hand.
+          </p>
+
+          <p>
+            The developer world is giving us a glimpse of what happens when that "human bridge" role collapses into a unified interface. Claude Code doesn't just write a line of code; it understands the file system, the shell, and the git history. It handles PRDs and documentation, connecting to the various systems developers use. It orchestrates the tools of development so the developer can focus on the <em>intent</em> of the software. It's not about a fancy chatbot. It's about a single place where intent turns into coordinated action across a messy stack. "Scaffolding" is how Daniel Miessler describes it, and I think it's spot on.
+          </p>
+
+          <p>
+            So that's the gap I keep circling: security has plenty of enforcement engines, and more signals than we can digest, but we don't have a control plane that makes the work feel flattened. We don't have a single place where intent becomes orchestration across the stack. We don't have the experience where the practitioner stops being a tool operator and starts being a risk architect by default, because the boring loops and the context-stitching are handled for them.
+          </p>
+
+          <h2>What This Could Look Like</h2>
+
+          <p>
+            At a high level, the thing I hope to see looks close to what we're seeing emerge in the broader agent space: a unified, browser-based experience where I can express intent in natural language, backed by real connectors into the tools I already use. The combination matters. In practice, some security work is API-driven and clean, and some of it is still trapped inside dashboards and weird admin portals. The orchestration layer needs to be able to live in both worlds — otherwise it's just another chat window that tells me what I already know while I keep clicking.
+          </p>
+
+          <p>Examples of things I would use this orchestration layer for:</p>
+
+          <ul>
+            <li>
+              <em>"Show me every endpoint that doesn't have disk encryption turned on. Correlate it with ownership and last check-in time, then create a Jira ticket for each device with the right assignee, priority, and remediation steps so I can hand it to IT."</em>
+            </li>
+            <li>
+              <em>"Pull our CSPM critical findings that map to Infrastructure-as-Code. Group them by repo and service, generate IaC fix suggestions, and open pull requests with the proposed changes. Keep them scoped, and tag the right owners for review."</em>
+            </li>
+            <li>
+              <em>"For this month's security report, tell me how we're doing on SLA for endpoint vulnerabilities. Pull the counts by severity and age bucket, call out what's trending better or worse, and update this month's deck with the numbers and a clean narrative."</em>
+            </li>
+            <li>
+              <em>"Find everyone delinquent on security training. Send them a Slack and an email with the right context and deadline, and if they don't respond in four hours, escalate to their manager. Track who completes and keep me posted."</em>
+            </li>
+            <li>
+              <em>"Give me a single view of 'what matters today.' Not a dump of alerts: the top three concerns, why they matter, what systems they touch, and the recommended next action — with the ability for me to approve and execute from here."</em>
+            </li>
+          </ul>
+
+          <p>
+            Yes, you can cobble pieces of this together today with middleware tools like Zapier or Tines — but that historical workflow model is brittle and doesn't handle nuance well. The real solution is being able to express intent to an orchestration layer and have it coordinate the work across your stack from one place.
+          </p>
+
+          <h2>Stay Tuned</h2>
+
+          <p>
+            This is Part One of a series because I'm still musing on the desire, not prescribing the full spec. I'm trying to name the thing I feel is missing, and the shape of the leverage I want. In Part Two, I'll get much more specific about what I think a Security Orchestration layer needs to be useful in the real world — including what it has to look like to be trustworthy, scoped, and human-in-the-loop in environments where "move fast and break things" is not an acceptable operating model.
+          </p>
+
+          <p>
+            I'm also working on some visuals to accompany this series — stay tuned for that.
+          </p>
+
+          <p>
+            I'm very aware I might just end up describing a general-purpose tool that OpenAI, Google, or Anthropic are already building — but I feel like some security special sauce is in there.
+          </p>
+
+          <p>
+            For now, I'll keep it simple: developers get IDEs that orchestrate their stack. Security is still doing the dashboard dance. I want one place where I can start my day, express intent, and orchestrate the rest.
+          </p>
+        </div>
+
+        <footer class="article-footer">
+          <a href="../index.html#writing" class="button secondary">← Back to Writing</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer class="container footer">
+      <p>&copy; <span id="year"></span> Anthony Matar</p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
