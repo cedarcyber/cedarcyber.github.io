@@ -11,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../styles.css" />
-    <link rel="stylesheet" href="../writing.css" />
+    <link rel="stylesheet" href="../styles.min.css" />
+    <link rel="stylesheet" href="../writing.min.css" />
   </head>
   <body>
     <div class="reading-progress" id="reading-progress"></div>
@@ -49,7 +49,10 @@
         </div>
 
         <figure style="margin: 0 0 2rem 0; text-align: center;">
-          <img src="../IMG_5096.JPG" alt="Great (Cyber) Leap Forward" style="max-width: 100%; border-radius: 6px;" />
+          <picture>
+            <source srcset="../IMG_5096.webp" type="image/webp" />
+            <img src="../IMG_5096.JPG" alt="Great (Cyber) Leap Forward" style="max-width: 100%; border-radius: 6px;" loading="lazy" />
+          </picture>
         </figure>
 
         <div class="article-content">
@@ -96,7 +99,10 @@ That is as far as the analogy goes!! This is not a central authority forcing cha
           </p>
 
           <figure style="margin: 2rem 0; text-align: center;">
-            <img src="../tool-landscape-security.png" alt="Security vendor landscape" style="max-width: 100%; border-radius: 6px;" />
+            <picture>
+              <source srcset="../tool-landscape-security.webp" type="image/webp" />
+              <img src="../tool-landscape-security.png" alt="Security vendor landscape" style="max-width: 100%; border-radius: 6px;" loading="lazy" />
+            </picture>
             <figcaption style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280; font-style: italic;">a couple of the vendors that professionals have to deal with</figcaption>
           </figure>
 
